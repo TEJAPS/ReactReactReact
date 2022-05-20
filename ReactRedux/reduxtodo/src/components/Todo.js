@@ -30,17 +30,32 @@ const Todo = () => {
 
           <div>
             <div className="showItems">
-              <div className="eachItem">
-                <h3>test</h3>
-                <i
-                  className="far fa-trash-alt add-btn"
-                  title="Delete Item"
-                  onClick={() =>
-                    dispatch(deleteTodo(inputData), setInputData(""))
-                  }
-                ></i>
-              </div>
+              {list.map((elem) => {
+                return (
+                  <div className="eachItem" key={elem.id}>
+                    <h3>{elem.data}</h3>
+                    <div className="todo-btn" />
+                    <i
+                      className="far fa-trash-alt add-btn"
+                      title="Delete Item"
+                      onClick={() =>
+                        dispatch(deleteTodo(elem.id), setInputData(""))
+                      }
+                    ></i>
+                  </div>
+                );
+              })}
             </div>
+          </div>
+
+          <div className="showItems">
+            <button
+              className="btn effect04"
+              data-sm-link-text="remove All"
+              onClick={() => dispatch(removeTodo(), setInputData(""))}
+            >
+              <span>check list</span>
+            </button>
           </div>
         </div>
       </div>
