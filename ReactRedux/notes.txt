@@ -1,0 +1,9 @@
+step 1: npx create-react-app reduxtodo
+step 2: npm i redux react-redux
+step 3: added this cdn of fontawesome in index.html
+step 4: create actions, components, reducer, and store.js
+step 5: define actions in the actions folder
+step 6:
+
+video demo link : https://youtu.be/-q5sv95BPYw
+continue from here: https://youtu.be/-q5sv95BPYw?t=2323
